@@ -20,24 +20,23 @@ public class D1
 
     private void HandleLine(string value)
     {
-        if (value == "")
-        {
-            FinalizeElf();
-        }
-        else
+        if (value != "")
         {
             AddCaloriesToCurrentElf(value);
+            return;
         }
+
+        FinalizeElf();
+    }
+
+    private void AddCaloriesToCurrentElf(string value)
+    {
+        _currentElfCalories += int.Parse(value);
     }
 
     private void FinalizeElf()
     {
         _elves.Add(_currentElfCalories);
         _currentElfCalories = 0;
-    }
-
-    private void AddCaloriesToCurrentElf(string value)
-    {
-        _currentElfCalories += int.Parse(value);
     }
 }
