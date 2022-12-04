@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.D3;
 
-public class D3E1 : D3
+public class D3E1 : D3, IPuzzle
 {
     public async Task<string> Execute()
     {
