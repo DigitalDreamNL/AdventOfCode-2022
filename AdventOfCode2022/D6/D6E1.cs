@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.D6;
 
-public class D6E1 : D6, IPuzzle
+public class D6E1 : D6alt
 {
-    protected override int SignalLength => 4;
+    protected override int MarkerLength => 4;
 }

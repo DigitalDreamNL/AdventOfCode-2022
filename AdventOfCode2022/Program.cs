@@ -4,6 +4,7 @@ using AdventOfCode2022.D3;
 using AdventOfCode2022.D4;
 using AdventOfCode2022.D5;
 using AdventOfCode2022.D6;
+using AdventOfCode2022.D7;
 
 Console.WriteLine("Advent of Code 2022");
 
@@ -54,3 +55,11 @@ Console.WriteLine($"D6E1: {d6E1Result}");
 var d6E2 = new D6E2();
 var d6E2Result = await d6E2.Execute();
 Console.WriteLine($"D6E2: {d6E2Result}");
+
+var d7E1 = new D7E1();
+var d7E1Result = await d7E1.Execute();
+Console.WriteLine($"76E1: {d7E1Result}");
+
+var d7E2 = new D7E2();
+var d7E2Result = await d7E2.Execute();
+Console.WriteLine($"76E2: {d7E2Result}");

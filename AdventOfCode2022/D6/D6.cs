@@ -1,40 +1,38 @@
 ﻿namespace AdventOfCode2022.D6;
 
-public abstract class D6
+public abstract class D6 : IPuzzle
 {
-    protected abstract int SignalLength { get; } 
+    protected abstract int MarkerLength { get; } 
 
-    public async Task<string> Execute() => await Execute(SignalLength);
-
-    private async Task<string> Execute(int signalLength)
+    public async Task<string> Execute()
     {
         var data = await ReadInput();
-        return FindSignal(data, signalLength);
+        return FindMarker(data);
     }
 
     private static async Task<string> ReadInput() => await new StreamReader("D6/src/input.txt").ReadToEndAsync();
 
-    private static string FindSignal(string data, int signalLength)
+    private string FindMarker(string data)
     {
         for (var i = 0; i < data.Length; i++)
         {
-            if (AllCharactersInSignalLengthAreUnique(data, i, signalLength))
-                return (i + signalLength).ToString();
+            if (AllCharactersInMarkerLengthAreUnique(data, i))
+                return (i + MarkerLength).ToString();
         }
 
-        throw new Exception("No signal found");
+        throw new Exception("No marker found");
     }
 
-    private static bool AllCharactersInSignalLengthAreUnique(string data, int start, int signalLength)
+    private bool AllCharactersInMarkerLengthAreUnique(string data, int start)
     {
         var buffer = "";
         var uniqueCharacters = 0;
-        while (uniqueCharacters < signalLength && !buffer.Contains(data[start + uniqueCharacters]))
+        while (uniqueCharacters < MarkerLength && !buffer.Contains(data[start + uniqueCharacters]))
         {
             buffer += data[start + uniqueCharacters];
             uniqueCharacters++;
         }
 
-        return uniqueCharacters == signalLength;
+        return uniqueCharacters == MarkerLength;
     }
 }
