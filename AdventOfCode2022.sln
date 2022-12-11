@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2022.Tests", "AdventOfCode2022.Tests\AdventOfCode2022.Tests.csproj", "{E48CAE3E-BB2B-4C25-9485-9CD52C0A5B84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,5 +19,9 @@ Global
 		{55F7470C-6A25-4F83-A5E3-07D1FD593845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55F7470C-6A25-4F83-A5E3-07D1FD593845}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55F7470C-6A25-4F83-A5E3-07D1FD593845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48CAE3E-BB2B-4C25-9485-9CD52C0A5B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48CAE3E-BB2B-4C25-9485-9CD52C0A5B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48CAE3E-BB2B-4C25-9485-9CD52C0A5B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48CAE3E-BB2B-4C25-9485-9CD52C0A5B84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

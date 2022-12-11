@@ -2,14 +2,14 @@
 
 namespace AdventOfCode2022.D7;
 
-public abstract class D7
+public abstract class D7 : IPuzzle
 {
     private const string Input = "D7/src/input.txt";
     private const int DiskSpace = 70000000;
     protected abstract string PuzzleQuery();
     protected Disk Disk { get; private set; } = null!;
 
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         await InitializeDisk();
         return PuzzleQuery();

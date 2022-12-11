@@ -2,5 +2,5 @@
 
 public interface IPuzzle
 {
-    public Task<string> Execute();
+    public Task<string> Solve();
 }

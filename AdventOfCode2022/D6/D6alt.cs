@@ -7,7 +7,7 @@ public abstract class D6alt : IPuzzle
     private char[] _uniqueCharacters = Array.Empty<char>();
     private int _position;
 
-    public Task<string> Execute()
+    public Task<string> Solve()
     {
         using var sr = new StreamReader("D6/src/input.txt");
         return FindMarker(sr);

@@ -1,5 +1,6 @@
 ﻿using AdventOfCode2022.D1;
 using AdventOfCode2022.D10;
+using AdventOfCode2022.D11;
 using AdventOfCode2022.D2;
 using AdventOfCode2022.D3;
 using AdventOfCode2022.D4;
@@ -23,7 +24,7 @@ public static class PuzzleSelector
 
         while (puzzle == null)
         {
-            Console.Write("Day? (1-10): ");
+            Console.Write("Day? (1-11): ");
             day = Console.ReadLine();
 
             Console.Write("Part? (1-2): ");
@@ -43,6 +44,7 @@ public static class PuzzleSelector
                     "8" => new D8E1(),
                     "9" => new D9E1(),
                     "10" => new D10E1(),
+                    "11" => new D11E1(),
                     _ => null
                 },
                 "2" => day switch
@@ -57,17 +59,18 @@ public static class PuzzleSelector
                     "8" => new D8E2(),
                     "9" => new D9E2(),
                     "10" => new D10E2(),
+                    "11" => new D11E2(),
                     _ => null
                 },
                 _ => null
             };
 
             if (puzzle == null)
-                Console.Write("Invalid selection. Please try again.");
+                Console.WriteLine("Invalid selection. Please try again.");
         }
 
         Console.WriteLine();
-        var result = await puzzle.Execute();
+        var result = await puzzle.Solve();
         Printer.WriteResult(day!, part!, result);
         Console.WriteLine();
     }

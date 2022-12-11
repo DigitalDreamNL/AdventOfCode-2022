@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.D7;
 
-public class D7E2 : D7, IPuzzle
+public class D7E2 : D7
 {
     private const int UpdateSize = 30000000;
 

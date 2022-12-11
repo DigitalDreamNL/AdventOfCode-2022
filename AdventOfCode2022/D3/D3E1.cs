@@ -2,7 +2,7 @@
 
 public class D3E1 : D3, IPuzzle
 {
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         using var sr = new StreamReader("D3/src/input.txt");
         while (!sr.EndOfStream)

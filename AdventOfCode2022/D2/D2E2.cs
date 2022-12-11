@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.D2;
 
-public class D2E2 : D2, IPuzzle
+public class D2E2 : D2
 {
     protected override Dictionary<string, int> ScoringTable =>
         new()

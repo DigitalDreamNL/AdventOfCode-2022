@@ -7,7 +7,7 @@ public class D8E2 : D8, IPuzzle
     private int NumberOfRows => Trees.Count;
     private int NumberOfColumns => Trees[0].Count;
 
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         await PopulateForest();
         return FindHighestTreeValue().ToString();

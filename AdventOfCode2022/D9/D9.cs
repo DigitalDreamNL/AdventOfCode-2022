@@ -6,7 +6,7 @@ public abstract class D9 : IPuzzle
 {
     protected abstract int RopeLength { get; }
     
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         var rope = new Rope(RopeLength);
         

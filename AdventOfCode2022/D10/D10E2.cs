@@ -2,13 +2,13 @@
 
 public class D10E2 : D10, IPuzzle
 {
-    private const string LitPixel = "█";
-    private const string DarkPixel = " ";
+    private const string LitPixel = "██";
+    private const string DarkPixel = "  ";
     private const int Delay = 10;
 
     private string _pixels = "";
 
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         await ParseSignal();
         DrawPixelsOnScreen();
@@ -17,7 +17,7 @@ public class D10E2 : D10, IPuzzle
 
     private void DrawPixelsOnScreen()
     {
-        _pixels.Chunk(40).ToList().ForEach(DrawLine);
+        _pixels.Chunk(40 * LitPixel.Length).ToList().ForEach(DrawLine);
         Console.WriteLine();
     }
 

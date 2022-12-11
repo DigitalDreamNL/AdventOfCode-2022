@@ -4,7 +4,7 @@ public abstract class D6 : IPuzzle
 {
     protected abstract int MarkerLength { get; } 
 
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         var data = await ReadInput();
         return FindMarker(data);

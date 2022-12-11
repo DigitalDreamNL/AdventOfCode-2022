@@ -5,7 +5,7 @@ public class D10E1 : D10, IPuzzle
     private readonly int[] _relevantCycles = {20, 60, 100, 140, 180, 220};
     private int _result = 0;
 
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         await ParseSignal();
         return _result.ToString();

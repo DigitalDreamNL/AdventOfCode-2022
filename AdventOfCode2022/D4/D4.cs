@@ -1,11 +1,11 @@
 ﻿namespace AdventOfCode2022.D4;
 
-public abstract class D4
+public abstract class D4 : IPuzzle
 {
     private int _overlappingAreasCount;
     protected abstract bool Comparator(int[] edges);
 
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         using var sr = new StreamReader("D4/src/input.txt");
         while (!sr.EndOfStream)

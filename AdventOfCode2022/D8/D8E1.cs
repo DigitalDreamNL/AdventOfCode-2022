@@ -2,7 +2,7 @@
 
 public class D8E1 : D8, IPuzzle
 {
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         await PopulateForest();
         return TreesVisibleInHorizontalLines().Concat(TreesVisibleInVerticalLines())

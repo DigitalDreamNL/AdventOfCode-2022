@@ -2,7 +2,7 @@
 
 public class D3E2 : D3, IPuzzle
 {
-    public async Task<string> Execute()
+    public async Task<string> Solve()
     {
         var groups = await DetermineGroups();
         groups.ToList().ForEach(HandleGroup);
