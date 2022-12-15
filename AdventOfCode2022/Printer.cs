@@ -4,6 +4,7 @@ public static class Printer
 {
     public static void WriteIntro()
     {
+        Console.WriteLine();
         WriteGreen(@"     _       _                 _            __    ____          _      ");WriteRed(@"  ____   ___ ____  ____  ");
         WriteGreen(@"    / \   __| |_   _____ _ __ | |_    ___  / _|  / ___|___   __| | ___ ");WriteRed(@" |___ \ / _ \___ \|___ \ ");
         WriteGreen(@"   / _ \ / _` \ \ / / _ \ '_ \| __|  / _ \| |_  | |   / _ \ / _` |/ _ \");WriteRed(@"   __) | | | |__) | __) |");
@@ -17,18 +18,20 @@ public static class Printer
     {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write(text);
+        Console.ResetColor();
     }
 
     private static void WriteRed(string text)
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine(text);
+        Console.ResetColor();
     }
 
     public static void WriteResult(string day, string part, string result)
     {
-        WriteResultPart("Solution for day ", day);
-        WriteResultPart(" part ", part);
+        WriteResultPart("Solution for Day ", day);
+        WriteResultPart(" Part ", part);
         WriteResultPart(" is ", result);
         Console.WriteLine();
     }

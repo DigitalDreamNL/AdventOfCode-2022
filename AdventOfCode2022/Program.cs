@@ -1,12 +1,17 @@
 ﻿using AdventOfCode2022;
-
-Printer.WriteIntro();
+using AdventOfCode2022.Helpers;
 
 var solvePuzzles = true;
 while (solvePuzzles)
 {
+    Console.Clear();
+    Printer.WriteIntro();
+    Console.ResetColor();
+
     await PuzzleSelector.Execute();
 
-    Console.WriteLine("Solve another puzzle? (Y/n)");
-    solvePuzzles = Console.ReadLine()!.ToLower() != "n";
+    var solveMorePuzzles = Ask.MultipleChoiceQuestion("Solve another puzzle?", new List<string> { "Yes", "No" });
+    solvePuzzles = solveMorePuzzles == "Yes";
 }
+
+Console.Clear();

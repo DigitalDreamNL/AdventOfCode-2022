@@ -60,7 +60,7 @@ public class Monkey : IMonkey
     private decimal CalculateNewValue(IEnumerable<IMonkey> monkeys, ulong old) =>
         _reduceWorryLevel
             ? Math.Floor(PerformOperation(old) / 3)
-            : PerformOperation(old); // % monkeys.Select(m => m.TestValue).Aggregate(1, (acc, val) => acc * val);
+            : PerformOperation(old) % monkeys.Select(m => m.TestValue).Aggregate(1, (acc, val) => acc * val);
 
     private decimal PerformOperation(ulong old)
     {
